@@ -7,7 +7,13 @@ The following request produces a String message to the topic:
 curl -X POST http://localhost:8080/pokemon/appear
 ```
 
-The following request produces an AVRO message to the topic:
+## Generating the Pokemon Java AVRO Schema based:
+```
+./mvnw clean package
+```
+The file will be available in **target/generated-sources/avsc**
+
+## Producing a Pokemon AVRO message to the topic:
 ```
 curl --header "Content-Type: application/json" \
   --request POST \
