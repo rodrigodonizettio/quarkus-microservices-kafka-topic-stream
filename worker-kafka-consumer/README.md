@@ -1,6 +1,11 @@
 # worker-kafka-consumer Project
 
-This application consumes data coming from "pokemon-appear" Kafka Topic and logs it in the console.
+This application consumes data coming from "pokemon-appear" and "pokemon-appear-avro" Kafka Topics and logs it in the console.
+
+The following request produces SSE to receive AVRO messages to the topic:
+```
+curl -N http://localhost:8081/pokemon/appear-avro
+```
 
 ## Running the application in dev mode
 
