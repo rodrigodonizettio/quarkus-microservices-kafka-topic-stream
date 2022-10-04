@@ -1,0 +1,23 @@
+{
+  "namespace": "br.com.rodrigodonizettio.avro",
+  "type": "record",
+  "name": "Pokemon",
+  "fields": [
+    {
+      "name": "uuid",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "height",
+      "type": "int"
+    },
+    {
+      "name": "weight",
+      "type": "int"
+    }
+  ]
+}
