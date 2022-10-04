@@ -7,6 +7,12 @@ The following request produces SSE to receive AVRO messages to the topic:
 curl -N http://localhost:8081/pokemon/appear-avro
 ```
 
+## Generating the Pokemon Java AVRO Schema based:
+```
+./mvnw clean package
+```
+The file will be available in **target/generated-sources/avsc**
+
 ## Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
