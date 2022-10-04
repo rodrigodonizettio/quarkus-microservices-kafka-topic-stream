@@ -1,10 +1,18 @@
 # worker-kafka-producer Project
 
-This application produces data to "pokemon-appear" Kafka Topic.
+This application produces data to "pokemon-appear" and "pokemon-appear-avro" Kafka Topics.
 
-The following request produces a message to the topic:
+The following request produces a String message to the topic:
 ```
 curl -X POST http://localhost:8080/pokemon/appear
+```
+
+The following request produces an AVRO message to the topic:
+```
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"uuid":"a01ca9c9-23e2-4045-9b17-779a09289746","name":"Charmander", "height":6,"weight":85}' \
+  http://localhost:8080/pokemon/appear-avro
 ```
 
 ## Running the application in dev mode
