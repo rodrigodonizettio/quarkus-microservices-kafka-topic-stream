@@ -59,8 +59,8 @@ services:
       - kafka-network
 
   consumer:
-    image: quarkus/worker-kafka-consumer-${QUARKUS_MODE:-jvm}:2.0
-    #image: rodrigodonizettio/quarkus-worker-kafka-consumer:2.0
+    image: quarkus/worker-kafka-consumer-${QUARKUS_MODE:-jvm}:1.1.0
+    #image: rodrigodonizettio/quarkus-worker-kafka-consumer:1.1.0
     build:
       context: worker-kafka-consumer
       dockerfile: src/main/docker/Dockerfile.${QUARKUS_MODE:-jvm}
